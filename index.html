@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Human Body Explorer</title>
+  <meta name="description" content="Project IPAS Kelas X PPLG: sistem saraf dan sistem gerak manusia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#home">Human Body <span>Explorer</span></a>
+    <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu">
+      <a href="#home">Home</a>
+      <a href="#saraf">Sistem Saraf</a>
+      <a href="#gerak">Sistem Gerak</a>
+      <a href="#hubungan">Saraf dan Gerak</a>
+      <a href="#kuis">Kuis</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="tag">Materi IPAS Website Sistem Gerak</p>
+          <h1>DIGITAL HUMAN BODY EXPLORER</h1>
+          <p class="lead">Jelajahi bagaimana otak, sumsum tulang belakang, saraf, tulang, sendi, dan otot bekerja bersama sehingga kita bisa merasakan dan bergerak.</p>
+          <a class="btn" href="#saraf">Explore Human Body</a>
+        </div>
+        <figure class="hero-fig">
+          <div id="heroArt"></div>
+          <figcaption>Visualisasi digital transparan: otak, sumsum tulang belakang, saraf tepi, dan rangka.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="saraf" class="sec">
+      <div class="wrap">
+        <h2>Sistem Saraf</h2>
+        <p class="sub">Sistem saraf menerima rangsangan, mengolahnya, lalu memerintahkan tubuh merespons. Klik tombol pada kartu untuk melihat detail.</p>
+        <div class="grid" id="sarafGrid"></div>
+      </div>
+    </section>
+
+    <section id="gerak" class="sec alt">
+      <div class="wrap">
+        <h2>Sistem Gerak</h2>
+        <p class="sub">Tulang, sendi, dan otot membentuk alat gerak. Tulang menjadi rangka, sendi menjadi engsel, otot menjadi penggeraknya.</p>
+        <div class="grid" id="gerakGrid"></div>
+      </div>
+    </section>
+
+    <section id="hubungan" class="sec">
+      <div class="wrap">
+        <h2>Hubungan Sistem Saraf dan Sistem Gerak</h2>
+        <p class="sub">Pilih jenis gerak, lalu klik setiap tahap atau jalankan animasi alurnya.</p>
+        <div class="tabs" role="tablist">
+          <button class="tab on" data-flow="sadar" role="tab">Gerak Sadar</button>
+          <button class="tab" data-flow="refleks" role="tab">Gerak Refleks</button>
+        </div>
+        <div id="steps" class="steps"></div>
+        <div class="panel" id="stepPanel" aria-live="polite"></div>
+        <div class="ctrl">
+          <button class="btn ghost" id="prevStep">Sebelumnya</button>
+          <button class="btn" id="playFlow">Jalankan animasi</button>
+          <button class="btn ghost" id="nextStep">Berikutnya</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="kuis" class="sec alt">
+      <div class="wrap narrow">
+        <h2>Kuis</h2>
+        <p class="sub">Uji pemahamanmu. Setiap soal bernilai sama, skor maksimal 100.</p>
+        <div class="quiz" id="quiz"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="close" id="closeModal" aria-label="Tutup">Tutup</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <strong>Digital Human Body Explorer</strong>
+    <span>Project IPAS Kelas X PPLG</span>
+    <span>Created by Mutisya Alya Fajria Absen 28</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
